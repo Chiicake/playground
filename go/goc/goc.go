@@ -11,7 +11,6 @@ void cHello() {
 import "C"
 import (
 	"fmt"
-	"unsafe"
 )
 
 func goc() {
@@ -20,12 +19,12 @@ func goc() {
 	C.cHello()
 
 	// 方法2: 直接调用C标准库函数
-	C.printf(C.CString("Hello from C printf directly!\n"))
+	//C.printf(C.CString("Hello from C printf directly!\n"))
 
 	// 方法3: 传递参数给C函数
-	name := C.CString("Go Developer")
-	defer C.free(unsafe.Pointer(name)) // 记得释放C分配的内存
-	C.printf(C.CString("Hello, %s!\n"), name)
+	//name := C.CString("Go Developer")
+	//defer C.free(unsafe.Pointer(name)) // 记得释放C分配的内存
+	//C.printf(C.CString("Hello, %s!\n"), name)
 
 	fmt.Println("Hello from Go!")
 }
