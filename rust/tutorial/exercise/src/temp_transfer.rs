@@ -1,4 +1,4 @@
-fn f2c(temp: i32) -> i32 {
+pub(crate) fn f2c(temp: i32) -> i32 {
     (temp - 32) * 5 / 9
 }
 
